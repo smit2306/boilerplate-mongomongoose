@@ -5,7 +5,8 @@
     "main": "server.js",
     "scripts": {
         "start": "npm run build && node dist/server.js",
-        "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./package.json,./babelrc,./npm-debug.log --copy-files"
+        "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./package.json,./babelrc,./npm-debug.log --copy-files",
+        "start:watch": "nodemon --config ./nodemon.json"
     },
     "dependencies": {
         "@types/mongoose": "^5.10.2",
@@ -31,6 +32,7 @@
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.7.0",
+        "nodemon": "^2.0.6",
         "rimraf": "^3.0.2"
     }
 }
